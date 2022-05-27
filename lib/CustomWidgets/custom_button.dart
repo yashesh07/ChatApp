@@ -9,6 +9,7 @@ class CustomButton extends StatelessWidget {
   final double width;
   final double elevation;
   final double textFontSize;
+  final FontWeight fontWeight;
   final Function() onPress;
   final double edgeRadius;
 
@@ -21,6 +22,7 @@ class CustomButton extends StatelessWidget {
       this.textColour = Colors.black,
       this.textFontSize = 20.0,
       this.edgeRadius = 50.0,
+        this.fontWeight = FontWeight.w300,
         this.borderColour = Colors.transparent,
       this.elevation = 0.0,});
 
@@ -43,7 +45,7 @@ class CustomButton extends StatelessWidget {
               color: textColour,
               fontSize: textFontSize,
               fontFamily: 'Dongle',
-              fontWeight: FontWeight.w300),
+              fontWeight: fontWeight),
         ),
       ),
     );

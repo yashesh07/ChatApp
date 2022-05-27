@@ -1,3 +1,4 @@
+import 'package:chat_app/Authentication/login_screen.dart';
 import 'package:chat_app/Onboarding/onboarding_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -18,7 +19,7 @@ class Messagee extends StatelessWidget {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Messagee',
-      home: OnboardingScreen(),
+      home: LoginScreen(),
     );
   }
 }
