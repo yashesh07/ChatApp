@@ -1,3 +1,4 @@
+import 'package:chat_app/Authentication/login_screen.dart';
 import 'package:chat_app/CustomWidgets/colors.dart';
 import 'package:chat_app/CustomWidgets/custom_button.dart';
 import 'package:flutter/material.dart';
@@ -44,7 +45,11 @@ class OnboardingScreen extends StatelessWidget {
               padding: const EdgeInsets.symmetric(vertical: 20),
               child: CustomButton(
                 text: 'Skip',
-                onPress: (){},
+                onPress: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context) {
+                    return const LoginScreen();
+                  }));
+                },
                 borderColour: kPink,
                 textColour: kPink,
               ),
@@ -53,7 +58,11 @@ class OnboardingScreen extends StatelessWidget {
               padding: const EdgeInsets.symmetric(vertical: 20),
               child: CustomButton(
                 text: 'Next',
-                onPress: (){},
+                onPress: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context) {
+                    return const LoginScreen();
+                  }));
+                },
                 borderColour: kDarkGreen,
                 colour: kDarkGreen,
                 textColour: Colors.white,

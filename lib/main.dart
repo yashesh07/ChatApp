@@ -1,3 +1,5 @@
+import 'package:chat_app/Authentication/create_account_screen.dart';
+import 'package:chat_app/Authentication/forgot_password_screen.dart';
 import 'package:chat_app/Authentication/login_screen.dart';
 import 'package:chat_app/Onboarding/onboarding_screen.dart';
 import 'package:flutter/material.dart';
@@ -19,7 +21,7 @@ class Messagee extends StatelessWidget {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Messagee',
-      home: LoginScreen(),
+      home: OnboardingScreen(),
     );
   }
 }

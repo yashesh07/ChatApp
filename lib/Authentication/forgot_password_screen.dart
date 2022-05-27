@@ -1,14 +1,14 @@
 import 'package:chat_app/App/home_screen.dart';
-import 'package:chat_app/Authentication/forgot_password_screen.dart';
+import 'package:chat_app/Authentication/create_account_screen.dart';
 import 'package:chat_app/CustomWidgets/colors.dart';
 import 'package:chat_app/CustomWidgets/constants.dart';
 import 'package:chat_app/CustomWidgets/custom_button.dart';
 import 'package:flutter/material.dart';
 
-import 'create_account_screen.dart';
+import 'login_screen.dart';
 
-class LoginScreen extends StatelessWidget {
-  const LoginScreen({Key? key}) : super(key: key);
+class ForgotPasswordScreen extends StatelessWidget {
+  const ForgotPasswordScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -36,7 +36,7 @@ class LoginScreen extends StatelessWidget {
                         ),
                       ),
                       const Text(
-                        'Log In',
+                        'Forgot Password?',
                         style: TextStyle(
                           fontWeight: FontWeight.w500,
                           fontSize: 23,
@@ -51,19 +51,24 @@ class LoginScreen extends StatelessWidget {
                         child: Padding(
                           padding: const EdgeInsets.only(right: 15),
                           child: TextButton(
-                            onPressed: (){},
+                            onPressed: (){
+                            },
                             child: Image.asset('images/back_arrow.png', width: 35, height: 35,),
                           ),
                         ),
                       ),
                     ],
                   ),
-                  const Text(
-                    'Welcome Back!',
-                    style: TextStyle(
-                      fontWeight: FontWeight.w300,
-                      fontSize: 13,
-                      color: Colors.white,
+                  const Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 50),
+                    child: Text(
+                      'Enter mail Id Password Reset Link Will Be Send To The Mail Id',
+                      style: TextStyle(
+                        fontWeight: FontWeight.w300,
+                        fontSize: 13,
+                        color: Colors.white,
+                      ),
+                      textAlign: TextAlign.center,
                     ),
                   )
                 ],
@@ -75,7 +80,7 @@ class LoginScreen extends StatelessWidget {
             child: Container(
               decoration: kBoxDecoration,
               child: Padding(
-                padding: const EdgeInsets.fromLTRB(30, 50, 30, 25),
+                padding: const EdgeInsets.fromLTRB(30, 75, 30, 25),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -109,53 +114,7 @@ class LoginScreen extends StatelessWidget {
                           ),
                         ),
                         const SizedBox(
-                          height: 20,
-                        ),
-                        Row(
-                          children: const [
-                            Padding(
-                              padding: EdgeInsets.only(left: 15),
-                              child: Text(
-                                'Password',
-                                style: TextStyle(
-                                  fontSize: 13,
-                                  fontWeight: FontWeight.w500,
-                                ),
-                                textAlign: TextAlign.left,
-                              ),
-                            ),
-                          ],
-                        ),
-                        const SizedBox(
-                          height: 20,
-                        ),
-                        TextFormField(
-                          style: const TextStyle(color: Colors.grey, fontSize: 15, fontWeight: FontWeight.w500),
-                          obscureText: true,
-                          onChanged: (value) {
-                          },
-                          decoration: kTextFieldDecoration.copyWith(
-                            hintText: 'Enter your password',
-                          ),
-                        ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.end,
-                          children: [
-                            TextButton(
-                              onPressed: (){
-                                Navigator.push(context, MaterialPageRoute(builder: (context) {
-                                  return const ForgotPasswordScreen();
-                                }));
-                              },
-                              child: Text(
-                                'Forgot Password?',
-                                style: TextStyle(color: kDarkGreen, fontSize: 13, fontWeight: FontWeight.w400),
-                              ),
-                            ),
-                          ],
-                        ),
-                        const SizedBox(
-                          height: 30,
+                          height: 75,
                         ),
                         CustomButton(
                           text: 'LOG IN',
